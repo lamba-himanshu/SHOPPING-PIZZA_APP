@@ -1,0 +1,55 @@
+.card {
+    padding: 5px;
+    height: 400px; /* Fixed height for the card */
+    max-width: 18rem; /* Optional: limit the card's maximum width */
+    margin-bottom: 20px; /* Space between cards */
+    margin-right: 20px; /* Space between cards horizontally */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevents content from overflowing */
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+}
+
+.card-img-top {
+    width: 100%; /* Ensures image fills the card width */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintains aspect ratio */
+}
+
+.card-body {
+    padding: 15px; /* Padding inside the card body */
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    justify-content: space-between; /* Space between elements */
+    height: calc(100% - 200px); /* Adjust height based on image height */
+    overflow: hidden; /* Prevents content from overflowing */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Font size for title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.card-text {
+    font-size: 1rem; /* Font size for description */
+    margin-bottom: 10px; /* Space below the description */
+    overflow: auto; /* Allows scrolling if content overflows */
+    max-height: calc(100% - 60px); /* Limits the maximum height to fit within the card body */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    -ms-overflow-style: none;  /* Hides scrollbar in Internet Explorer and Edge */
+}
+
+.card-text::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in WebKit browsers (Chrome, Safari) */
+}
+
+.btn-primary {
+    align-self: flex-start; /* Aligns button to the start of the card body */
+    margin-top: auto; /* Pushes button to the bottom of the card body */
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%; /* Ensures the card fits well on smaller screens */
+    }
+}
